@@ -33,16 +33,16 @@ $newData = new Data();
    $msg = $_POST["user_message"];
 
    // Valores enviados desde el formulario
-if ( !isset($name) || !isset($email) || !isset($msg) {
+if ( !isset($name) || !isset($email) || !isset($msg)) {
    header("HTTP/1.1 401 OK");
    $newData->updateStatus(401, "Complete todos los campos obligatorios.");
    echo json_encode($newData, JSON_PRETTY_PRINT);
    die();
 }
 // Datos de la cuenta de correo utilizada para enviar vía SMTP
-$smtpHost = "mail.tejasverdes.com.ar"; // Dominio alternativo brindado en el email de alta 
-$smtpUsuario = "webmaster@tejasverdes.com.ar";  // Mi cuenta de correo
-$smtpClave = "tejasverdes";  // Mi contraseña
+$smtpHost = "grillo.avnam.net"; // Dominio alternativo brindado en el email de alta 
+$smtpUsuario = "info@tejasverdes.com.ar";  // Mi cuenta de correo
+$smtpClave = "tejas2012";  // Mi contraseña
 
 // Email donde se enviaran los datos cargados en el formulario de contacto
 $emailDestino = "deruvodaniel@gmail.com";
@@ -77,19 +77,17 @@ $mail->AltBody = "{$msg} \n\n"; // Texto sin formato HTML
 
 $estadoEnvio = $mail->Send(); 
 
-echo json_encode($mail, JSON_PRETTY_PRINT);
-echo json_encode($estadoEnvio, JSON_PRETTY_PRINT);
-// echo $mail->ErrorInfo;
-//  if($estadoEnvio){
-//      header("HTTP/1.1 200 OK");
-//   $returnData = "Su consulta fue enviada correctamente.";
-//    $newData->updateStatus(200, $returnData);
-//    echo json_encode($newData, JSON_PRETTY_PRINT);
-// } else {
-//  header("HTTP/1.1 500 OK");
-// echo 'Mailer Error: ' . $mail->ErrorInfo;
-// // $newData->updateStatus(500, "Error al enviar su consulta.");
-// $newData->updateStatus(500, $mail->ErrorInfo);
-// echo json_encode($newData, JSON_PRETTY_PRINT);
-// }
+
+ if($estadoEnvio){
+   header("HTTP/1.1 200 OK");
+  $returnData = "Su consulta fue enviada correctamente.";
+   $newData->updateStatus(200, $returnData);
+   echo json_encode($newData, JSON_PRETTY_PRINT);
+} else {
+ header("HTTP/1.1 500 OK");
+echo 'Mailer Error: ' . $mail->ErrorInfo;
+// $newData->updateStatus(500, "Error al enviar su consulta.");
+$newData->updateStatus(500, $mail->ErrorInfo);
+echo json_encode($newData, JSON_PRETTY_PRINT);
+}
 
