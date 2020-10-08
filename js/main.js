@@ -1,20 +1,19 @@
+$(function(){
+    'use strict';
+    
+    // Ocultando la Navegación al hacer click
+    $('div.menu-nav ul li a').on ('click', function(){
+        $('#nav').removeClass('show');
+    });
 
-// (function () {
-//     "use strict";
-     
-//     document.addEventListener ('DOMContentLoaded', function(){
- 
- 
- 
-//     });  //    DOM CONTENT LOADED
-//  })();
+    // Achicando barra FIXEDTOP
+    $('div.menu-hamburguesa a').on ('click', function(){
+        $('.logo img').animate({'height': '3rem'}, 1000);
+    });
+    
+      
+    
+        
 
 
-// $(function(){
-
-//     // Menu Responsive
-//     $('.menu-hamburguesa').on('click', function () {
-//         $('.menu').slideToggle();
-//     });
-
-// });
+});

@@ -37,9 +37,6 @@
 
 }
 
-body {
-    padding-top: 6rem;
-}
 
 h2 {
     font-family: 'gothamblackregular';
@@ -76,6 +73,18 @@ a {
     
 }
 
+body {
+    margin-top: 3rem;
+}
+
+ul {
+    padding-inline-start: 0;
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
 
 .btn {
     color: #03ced9;
@@ -96,6 +105,15 @@ a {
   
 }
 
+/* Evitando que la barra Fixed tape contenido */
+.ancla:before {       
+    display: block;       
+    content: " ";       
+    margin-top: -4rem;       
+    height: 4rem;       
+    visibility: hidden; 
+  }     
+
 /* Home */
 
 .home {
@@ -109,11 +127,11 @@ div.menu-nav {
     background-color: #ffffff;
     height: auto;
     height: 100vh;
-    padding: 3rem;
+    padding: 2rem;
     }
 
     div.menu-nav ul {
-        padding-bottom: 3rem;
+        padding-bottom: 1rem;
     }
 
 div.menu-nav a{
@@ -128,17 +146,20 @@ div.menu-nav a{
 }
 .logo {
     background-color: #ffffff;
+    padding: 0;
 }
 .logo img{
     height: 6rem;
     display:block;
     margin-right: auto;
+    margin-left: 2rem;
     
 }
 
 .verde {
     background-color: #14d8ca;
     height: 0.6rem;
+    margin-right: 0;
 }
 
 nav.redes-sociales {
@@ -159,6 +180,7 @@ nav.redes-sociales a {
 
 div.menu-hamburguesa {
     background-color: #ffffff;
+    padding: 0;
 }
 div.menu-hamburguesa img {
     height: 3rem;
@@ -199,7 +221,9 @@ div.quienes-somos img {
     
 }
 
-
+.foto-manos {
+    padding: 0;
+}
 
 
 
@@ -292,10 +316,50 @@ ul.edilicios {
 
 }
 
+div.caracteristicas {
+    background-color: #104466;
+}
+
+div.caracteristicas h2{
+    color: #03ced9;
+    text-transform: uppercase;
+    font-family: 'gothamblackregular';
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    
+    
+}
+
+@media only screen and (min-width: 768px) {
+    .caracteristicas h2 {
+        font-size: 5rem;
+        
+
+     }
+    }
+
+div.caracteristicas img {
+    width: 8rem;
+}
+div.caracteristicas ul{
+    list-style: none;
+    margin-top: 1.7rem;
+    padding-left: 0;
+}
+
+div.caracteristicas ul li {
+    color: #ffffff;
+    font-family: 'gothamlightregular';
+    font-size: 0.7rem;
+    text-align: center;
+
+}
 /* Galeria */
 
 .carousel {
-    padding: 2rem
+    padding: 2rem;
+    margin-bottom: 6rem;
+    
 }
 
 .galeria h2{
@@ -316,7 +380,7 @@ section.contacto h2{
     color: #03ced9;
     text-transform: uppercase;
     font-family: 'gothamblackregular';
-    padding: 2rem;
+    padding: 0 2rem 0 2rem;
     text-align: start;
     
     
@@ -328,7 +392,7 @@ section.contacto h2{
 }
 
 .contacto ul li label{
-    color: #ffffff;
+    color: #03ced9;
     font-family: 'gothamlightregular';
     
 
@@ -338,7 +402,22 @@ section.contacto h2{
 textarea, button {
     background: none;
     border: 0;
+    color: #ffffff;
+    width: 250px;
     
+}
+
+.contacto textarea {
+    height: 10rem;
+    width: 450px;
+    resize: none;
+}
+
+.linea {
+    border-top: 1px solid #ffffff;
+    height: 2px;
+    max-width: 600px;
+    padding: .5rem;
 }
 
 .contacto button {
@@ -359,11 +438,13 @@ textarea, button {
     margin-top: 2rem;
     margin-bottom: 2rem;
     
+    
 }
 
 @media only screen and (min-width: 768px) {
     .blanco {
         border-radius: 10% 0 0 10%;
+        
 
      }
     }
@@ -396,6 +477,17 @@ div.blanco span {
     margin-right: auto;
 }
     
+.blanco2 {
+    padding: 0;
+}
+/* Mapa */
+.map-container {
+    padding: 0;
+}
+iframe {
+    max-width: 100%;
+    height: auto;
+}
 /* Footer */
 
 .footer-navegacion nav {
@@ -415,12 +507,13 @@ div.blanco span {
 
 .footer-redes {
     padding-left: 5rem;
-    margin: 0;
+    
 
 }
 
 .contacto-footer p{
     text-align: left;
+    padding: 0;
 
 }
 
