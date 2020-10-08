@@ -61,7 +61,7 @@
           </div> <!-- Sidebar --> <!-- Columna -->
         </div><!-- Row -->
       </div><!-- Row --> 
-    <header>  
+      <header>  
       <section id="inicio" class="home ancla"></section>
     </header>
     
@@ -288,7 +288,7 @@
           <div class="row">
             <div class="contenedor col-12 col-sm-12 col-md-5 col-lg-5">
               <h2>Contacto</h2>
-              <form action="/my-handling-form-page" method="post">
+              <form id="send_form">
                 <ul>
                 <li>
                   <label for="nombre">Nombre*:</label>
@@ -317,8 +317,9 @@
                 </li>
                 <div class="linea"></div>
                 </ul>
-                <button type="submit" class="col d-flex justify-content-center">Enviar mensaje</button>
-              </form><!-- Formulario Contacto -->              
+                
+              </form><!-- Formulario Contacto --> 
+              <a href="#" class="col d-flex justify-content-center js_send_button">Enviar mensaje</a>             
             </div><!-- Columna -->
 
             
