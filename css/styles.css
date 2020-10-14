@@ -517,3 +517,6 @@ iframe {
 
 }
 
+.contacto-footer p a {
+    text-transform: lowercase;
+}
