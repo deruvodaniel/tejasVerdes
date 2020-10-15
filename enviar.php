@@ -86,7 +86,7 @@ $estadoEnvio = $mail->Send();
 } else {
  header("HTTP/1.1 500 OK");
 echo 'Mailer Error: ' . $mail->ErrorInfo;
-// $newData->updateStatus(500, "Error al enviar su consulta.");
+$newData->updateStatus(500, "Error al enviar su consulta.");
 $newData->updateStatus(500, $mail->ErrorInfo);
 echo json_encode($newData, JSON_PRETTY_PRINT);
 }

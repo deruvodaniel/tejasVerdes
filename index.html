@@ -292,18 +292,18 @@
                 <ul>
                 <li>
                   <label for="nombre">Nombre*:</label>
-                  <input type="text" id="nombre" name="user_nombre" required>
+                  <input type="text" id="nombre" name="nombre" required>
                 </li>
                 <div class="linea"></div>
                 
                 <li>
                   <label for="apellido">Apellido:</label>
-                  <input type="text" id="apellido" name="user_Apellido" >
+                  <input type="text" id="apellido" name="apellido" >
                 </li>
                 <div class="linea"></div>
                 <li>
                   <label for="tel">Teléfono*:</label>
-                  <input type="number" id="tel" name="user_tel" required minlength="8">
+                  <input type="number" id="tel" name="tel" required minlength="8">
                 </li>
                 <div class="linea"></div>
                 <li>
@@ -349,9 +349,9 @@
                 <div class="row container-fluid">
                   <h3 class="col-12">Ubicación</h3>
                   
-                  <img src="img/LocationIcon.png" alt="LocationIcon" class="img-fluid align-self-center col-6">
+                  <img src="img/LocationIcon.png" alt="LocationIcon" class="img-fluid align-self-center col-12 col-sm-12 col-md-4 col-lg-4">
                   <!--Google map-->
-                  <div id="map-container-google-2" class="z-depth-1-half map-container col-12 col-sm-6 col-md-6 col-lg-6 d-block" style="height: 200px">
+                  <div id="map-container-google-2" class="z-depth-1-half map-container align-self-end" style="height: 200px">
                     <iframe class="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.490812559187!2d-58.47522118544097!3d-34.617035165708586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9f1b877a2c9%3A0xed33c1ad65fa1cba!2sTejas%20Verdes%20S.R.L.!5e0!3m2!1ses!2sus!4v1602102802265!5m2!1ses!2sus" width="350" height="150" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                   </div>
                 </div><!-- Row -->
@@ -394,19 +394,22 @@
                   </li>
                 </ul>
               </nav>
-
             </div>
 
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
-              <a href="#">
-                <img src="img/LogoHome.png" alt="LogoHome" class="img-fluid">
-              </a>
-              <nav class="redes-sociales">
-                <a href="https://www.facebook.com/Tejas-Verdes-Residencia-para-Mayores-372856582874674/"><i class="fab fa-facebook-f img-fluid"></i></a>
-                <a href="https://twitter.com/TejasVerdesyUd"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram img-fluid"></i></a>
-                <a href="https://www.youtube.com/channel/UCRdHfjErhJuvn6MuKN2yxVw"><i class="fab fa-youtube img-fluid"></i></a>
-              </nav><!-- Redes Sociales Navegación -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 container">
+              <div class="row">
+                <a href="#" class="logo-footer">
+                  <img src="img/LogoHome.png" alt="LogoHome" class="col-12 img-fluid ">
+                </a>
+                                
+                <nav class="col-12 footer-redes">
+                  <a href="https://www.facebook.com/Tejas-Verdes-Residencia-para-Mayores-372856582874674/"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://twitter.com/TejasVerdesyUd"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.youtube.com/channel/UCRdHfjErhJuvn6MuKN2yxVw"><i class="fab fa-youtube"></i></a>
+                </nav><!-- Redes Sociales Navegación -->
+                
+              </div>
             </div>
           </div>
         </div>

@@ -127,11 +127,12 @@ div.menu-nav {
     background-color: #ffffff;
     height: auto;
     height: 100vh;
-    padding: 2rem;
+    padding: 4rem 2rem;
+    
     }
 
-    div.menu-nav ul {
-        padding-bottom: 1rem;
+div.menu-nav ul {
+        padding-bottom: 6rem;
     }
 
 div.menu-nav a{
@@ -162,11 +163,6 @@ div.menu-nav a{
     margin-right: 0;
 }
 
-nav.redes-sociales {
-    
-    padding-left: 1.5rem;
-    
-}
 
 nav.redes-sociales a {
     color: #104466;
@@ -215,6 +211,16 @@ div.quienes-somos h2{
 div.quienes-somos p{
     padding: 0 2rem;
 }
+
+@media only screen and (min-width: 768px) {
+    .quienes-somos p {
+        font-size: 1.4rem;
+        
+
+     }
+    }
+
+
 div.quienes-somos img {
     width: 100%;
       
@@ -403,13 +409,13 @@ textarea, button {
     background: none;
     border: 0;
     color: #ffffff;
-    width: 250px;
+    width: 100%;
     
 }
 
 .contacto textarea {
     height: 10rem;
-    width: 450px;
+    width: 100%;
     resize: none;
 }
 
@@ -491,7 +497,7 @@ iframe {
 /* Footer */
 
 .footer-navegacion nav {
-    padding-top: 1rem;
+    padding: 1rem 2rem;
 }
 
 .footer-navegacion nav ul{
@@ -513,10 +519,54 @@ iframe {
 
 .contacto-footer p{
     text-align: left;
-    padding: 0;
+    padding: 2rem;
 
 }
 
 .contacto-footer p a {
     text-transform: lowercase;
 }
+
+.footer-redes {
+    padding: 2rem;
+    margin-left: 2.5rem;
+
+
+}
+
+@media only screen and (max-width: 468px) {
+    .footer-redes {
+        margin-left: 0;
+        
+
+     }
+    }
+
+
+.footer-redes a{
+ padding: 1rem;
+ font-size: 2rem;
+ text-align: center;
+
+}
+
+@media only screen and (max-width: 468px) {
+    .footer-redes a {
+    font-size: 1.2rem;
+        
+
+     }
+    }
+
+.logo-footer img{
+    padding: 2rem;
+    margin: 1rem;
+}
+
+@media only screen and (max-width: 468px) {
+    .logo-footer img {
+        margin: 0rem;
+        
+
+     }
+    }
