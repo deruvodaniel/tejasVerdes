@@ -434,6 +434,19 @@ textarea, button {
     font-family: 'gothamblackregular';
 }
 
+.error {
+    background-color: red;
+    color: #ffffff;
+    font-family: 'gothamlightregular';
+    font-size: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    position: absolute;
+    margin: -65px 0 0 90px;
+    display: none;
+
+}
+
 .contenedor {
     padding: 2rem;
 }
@@ -512,7 +525,7 @@ iframe {
 }
 
 .footer-redes {
-    padding-left: 5rem;
+    padding-left: 1rem;
     
 
 }
@@ -527,25 +540,10 @@ iframe {
     text-transform: lowercase;
 }
 
-.footer-redes {
-    padding: 2rem;
-    margin-left: 2.5rem;
-
-
-}
-
-@media only screen and (max-width: 468px) {
-    .footer-redes {
-        margin-left: 0;
-        
-
-     }
-    }
-
 
 .footer-redes a{
  padding: 1rem;
- font-size: 2rem;
+ font-size: 1.5rem;
  text-align: center;
 
 }
@@ -559,14 +557,6 @@ iframe {
     }
 
 .logo-footer img{
-    padding: 2rem;
-    margin: 1rem;
+    
+    margin-top: 1rem;
 }
-
-@media only screen and (max-width: 468px) {
-    .logo-footer img {
-        margin: 0rem;
-        
-
-     }
-    }

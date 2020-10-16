@@ -29,11 +29,11 @@ $newData = new Data();
    $name = $_POST["nombre"]; 
    $subname = $_POST["apellido"];
    $tel = $_POST["tel"];
-   $email = $_POST["user_mail"];
-   $msg = $_POST["user_message"];
+   $email = $_POST["mail"];
+   $msg = $_POST["msg"];
 
    // Valores enviados desde el formulario
-if ( !isset($name) || !isset($email) || !isset($msg)) {
+if ( !isset($_POST["nombre"]) || !isset($_POST["mail"]) || !isset($_POST["msg"])) {
    header("HTTP/1.1 401 OK");
    $newData->updateStatus(401, "Complete todos los campos obligatorios.");
    echo json_encode($newData, JSON_PRETTY_PRINT);
@@ -45,7 +45,7 @@ $smtpUsuario = "info@tejasverdes.com.ar";  // Mi cuenta de correo
 $smtpClave = "tejas2012";  // Mi contraseña
 
 // Email donde se enviaran los datos cargados en el formulario de contacto
-$emailDestino = "deruvodaniel@gmail.com";
+$emailDestino = "info@tejasverdes.com.ar";
 
 $mail = new PHPMailer();
 $mail->IsSMTP();
