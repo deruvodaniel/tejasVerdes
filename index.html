@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/styles.css">
   </head>
 
-  <body>
+  <body class="">
       <div id="barra" class="row fixed-top"> 
         <div class="logo col-10">
           <a class="navbar-brand" href="#inicio">
@@ -320,13 +320,16 @@
                 <li>
                   <label for="msg">Mensaje:</label>
                   <textarea id="msg"></textarea>
+                  <div id="error4" class="error">Ingrese su Consulta</div>
                 </li>
                 <div class="linea"></div>
                 </ul>
+
+                <button type="submit" href="#" id="enviar" class="col d-flex justify-content-center js_send_button">Enviar mensaje</button>
                 
               </form><!-- Formulario Contacto --> 
-              <button type="submit" href="#" id="enviar" class="col d-flex justify-content-center js_send_button">Enviar mensaje</button>
-              <div id="js-response-form"></div>            
+              
+              <div class="form-msg" id="js-response-form"></div>            
             </div><!-- Columna -->
 
             

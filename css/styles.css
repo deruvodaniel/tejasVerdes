@@ -114,6 +114,15 @@ ul {
     visibility: hidden; 
   }     
 
+  /*Esta clase se aplica para oscurecer toda la pantalla por debajo del nav*/
+.oscurecer {
+    filter: grayscale(100%);
+    height: 100%;
+    width: 100%;
+    
+}
+
+
 /* Home */
 
 .home {
@@ -444,6 +453,16 @@ textarea, button {
     position: absolute;
     margin: -65px 0 0 90px;
     display: none;
+
+}
+
+.form-msg {
+    margin: 1rem;
+    color: #ffffff;
+    padding: 1rem;
+    font-family: 'gothamlightregular';
+    text-align: center;
+    font-size: 1.4rem;
 
 }
 

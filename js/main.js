@@ -1,6 +1,17 @@
 
 $(function(){
 
+    // Ocultando la Navegación al hacer click
+    $('div.menu-nav ul li a').on('click', function(){
+        $('#nav').removeClass('show');
+    });
+
+    // Achicando barra FIXEDTOP
+    $('div.menu-hamburguesa a').on('click', function(){
+        $('.logo img').animate({'height': '3rem'}, 1000);
+        
+    });
+
     //Validar Formulario
 
     var expr = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
@@ -9,6 +20,7 @@ $(function(){
         var nombre = $('#nombre').val();
         var tel = $('#tel').val();
         var mail = $('#mail').val();
+        var msg = $('#msg').val();
 
         if(nombre == ""){
             $('#error1').fadeIn();
@@ -27,25 +39,23 @@ $(function(){
         if (mail == "" || !expr.test(mail)) {
             $("#error3").fadeIn();
             return false;
-            
+  
+        }else {
+            $('#error3').fadeOut();
+        }
+
+        if (msg == "" || !expr.test(msg)) {
+            $("#error4").fadeIn();
+            return false;
+  
+        }else {
+            $('#error4').fadeOut();
         }
 
 
 
     });
 
-
-
-    
-    // Ocultando la Navegación al hacer click
-    $('div.menu-nav ul li a').on('click', function(){
-        $('#nav').removeClass('show');
-    });
-
-    // Achicando barra FIXEDTOP
-    $('div.menu-hamburguesa a').on('click', function(){
-        $('.logo img').animate({'height': '3rem'}, 1000);
-    });
     
     var dataForm = {};
       
@@ -63,21 +73,22 @@ $(function(){
         if (!dataForm.nombre.length > 0 || !dataForm.tel.length > 0 || !dataForm.mail.length > 0 || !dataForm.msg.length > 0) {
             $('#js-response-form').html('Complete los campos obligatorios');
         } else {
-                console.log(dataForm);
+                
             $.ajax({
                 method: "POST",
                 url: "enviar.php",
                 data: dataForm
             })
                 .done(function( response ) {
-                console.log(response);
+                
                 var data = JSON.parse(response)
                 $('#js-response-form').html(data.message);
+                $('#send_form').fadeOut();
 
-                console.log(data);
+                
                 })
                 .fail(function(error){
-                    console.log(error);
+                    
                     var data = JSON.parse(error)
                     $('#js-response-form').html(data.message);
                 });
